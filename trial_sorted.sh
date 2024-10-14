@@ -5,7 +5,6 @@
 echo "Input files: $1"
 echo "Output file: $2"
 
-# Clear the output file if it exists, or create it
 > "$2"
 
 echo "$1" | tr ' ' '\n' | while read fname
