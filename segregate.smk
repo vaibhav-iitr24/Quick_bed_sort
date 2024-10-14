@@ -1,9 +1,9 @@
 import sys
 import pandas as pd
 
-run_df= pd.read_csv("data/run_metadat.tsv", sep="\t", header="infer")
+run_df= pd.read_csv("run_metadat.tsv", sep="\t", header="infer")
 
-sample_df=pd.read_csv("data/sample.tsv", sep="\t", header="infer")
+sample_df=pd.read_csv("sample.tsv", sep="\t", header="infer")
 
 run_df.index = run_df["run"]
 sample_df.index = sample_df["sample"]
@@ -25,4 +25,4 @@ rule merge_all_files:
     output:
         sorted = "Output/for_{sample}.bed"
     shell:
-        "sh scripts/trial_sorted.sh \"{input.all_runs}\" {output.sorted}"
+        "sh trial_sorted.sh \"{input.all_runs}\" {output.sorted}"
