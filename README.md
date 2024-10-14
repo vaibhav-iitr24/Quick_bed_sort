@@ -8,6 +8,6 @@ Creating required file: created run_metadat.tsv and sample.tsv to give file path
 Snakemake file:
 
 Now snakemake file generated(segregate.smk). Pandas library and sys module imported. Then a function defined to store file-path in list.
-Then snakemake parametr written i.e. rule, input, output, shell. And respective information  written in respective parameter.
+Then snakemake parameters incorporated in file i.e. rule, input, output, shell. And respective information  written in respective parameter.
 
 
